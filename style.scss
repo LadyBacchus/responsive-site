@@ -57,13 +57,11 @@ a {
 /* Header
 ------------------------------------------------------------*/
 #header {
-  width: auto;
-  height: auto;
   background-image: url('images/img_170908.jpg');
-  background-position {
-    background-size: cover;
-    background-position: center center;
-  }
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
 }
 
 /* Contents
@@ -145,7 +143,6 @@ section {
     @extend .uppercase;
     @include border-radius(4px);
     font-size: 1rem;
-    }
   }
   ul {
     text-align: center;
@@ -161,8 +158,6 @@ section {
       vertical-align: top;
       &:last-child {
         margin-right: 0;
-      &:hover {
-        background-color: darken($subColor, 10%);        
       }
     }
   }
@@ -187,13 +182,6 @@ footer {
     }
   }
 
-  //Header
-  #header {
-    height: 500px;
-    background-image: url('images/img_170908.jpg');
-    background-size: 100% 100%;
-  }
-
   // Skills
   #skills {
     .container {
@@ -204,14 +192,28 @@ footer {
       margin: 0 10px;
     }
   }
+
+  // Contact
+  #contact {
+    ul {
+      a {
+        &:hover {
+          background-color: darken($subColor, 10%);
+        }
+      }
+    }
+  }
 }
 
 //SP
 @media (max-width: 768px) {
-  //Header
+  /* Header
+  ------------------------------------------------------------*/
   #header {
-    height: 250px;
     background-image: url('images/img_170908.jpg');
-    background-size: 100% 100%;
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
   }
 }
